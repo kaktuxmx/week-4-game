@@ -3,10 +3,11 @@
 <html>
 <head>
 	<title>THe Loteria Number Game</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/reset.css">
+
 </head>
 <body>
 
@@ -15,7 +16,7 @@
 <div class="jumbotron">
   <h1>Welcome to the Loteria Number Game</h1>
   <p id="numerototal"></p>
-  <p></p>
+  <p>Rules: You need to click on each image in order to add a random number, if you click to get the exact number that is provided, you will win the game, if you get over you loose</p>
 </div>
 
 
@@ -23,9 +24,9 @@
 <div class="row">
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
-      <img src="assets/images/azteca.jpg" alt="azteca" width="150" height="100">
-      <div>
-        <h3></h3>
+      <img src="assets/images/azteca.jpg" class="foto1" alt="azteca" width="100" height="100">
+      <h3>Do you know the number? Click!</h3>
+      <div class="caption" id="azteca1">
         </div>
         </div>
   </div>
@@ -33,9 +34,9 @@
 <div class="row">
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
-      <img src="assets/images/cantante.jpg" alt="cantante" width="150" height="100">
+      <img src="assets/images/cantante.jpg" class="foto2" alt="cantante" width="100" height="100">
+      <h3>La Cantante is asking you to click!</h3>
       <div class="caption" id="cantante1">
-        <h3></h3>
         </div>
         </div>
   </div>
@@ -43,9 +44,9 @@
   <div class="row">
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
-      <img src="assets/images/catrin.jpg" alt="catrin" width="150" height="100">
+      <img src="assets/images/catrin.jpg" class="foto3" alt="catrin" width="100" height="100">
+      <h3>Are you brave to click on el Catrin?</h3>
       <div class="caption" id="catrin1">
-        <h3></h3>
         </div>
         </div>
   </div>
@@ -53,13 +54,24 @@
   <div class="row">
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
-      <img src="assets/images/pistola.jpg" alt="pistola" width="150" height="100">
+      <img src="assets/images/pistola.jpg" class="foto4" alt="pistola" width="100" height="100">
+      <h3>Maybe you need it to click in here!</h3>
       <div class="caption" id ="pistola1">
-        <h3></h3>
         </div>
         </div>
   </div>
   </div>
+<div class="well well-sm"></div>
+
+
+<ul class="list-group">
+  <li class="list-group-item" id="numerototal1"></li>
+  <li class="list-group-item" id="valordenumero"></li>
+  <li class="list-group-item"></li>
+  <li class="list-group-item"></li>
+  <li class="list-group-item"></li>
+</ul>
+
 
 </body>
 </html>
