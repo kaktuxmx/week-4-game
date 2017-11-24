@@ -31,39 +31,41 @@ var ranimg4 = Math.floor(Math.random() * 9)+ 1;
 
 
 
-
-
 var ntotal = 0;
+var scorewin = 0;
+var scoreloose = 0;
 
-// 1. Pick the random amounts with the clicks on the images and add up the addition on the screen
 
-//verifing if i can do this... with the n variables... still not making my n to wokr on the HTML...
-		$("#foto1").on("click", function(){
-				ntotal += ranimg1;
-				console.log(ntotal);
+		$("#foto1").attr("ran", ranimg1);
+		$("#foto2").attr("ran", ranimg2);
+		$("#foto3").attr("ran", ranimg3);
+		$("#foto4").attr("ran", ranimg4);
+
+
+		$(".foto").click(function(){
+				console.log(this);
+				ntotal += parseInt($(this).attr("ran"));
 				$("#valordenumero").html("The number that you have so far is:" + ntotal);
-		});
-		$("#foto2").on("click", function(){
-				ntotal += ranimg2;
-				$("#valordenumero").html("The number that you have so far is:" + ntotal);
-		});
-		$("#foto3").on("click", function(){
-				ntotal += ranimg3;
-				console.log(ntotal);
-				$("#valordenumero").html("The number that you have so far is:" + ntotal);
-		});
-		$("#foto4").on("click", function(){
-				ntotal += ranimg4;
-				$("#valordenumero").html("The number that you have so far is:" + ntotal);
-		});
-				
+				addingnumber();
+		});		
 
 		function addingnumber() {
-			if (ntotal === randomtotalnm) {
-					$("#yaganaste").html("GANASTE!!!!!!")
+			if (ntotal > randomtotalnm) {
+					$("#yaganaste").html("You are over!");
+					scoreloose++;
+					$("#scoreloose").html("Your loose games: " + scoreloose);
+					}
+
+			else if (ntotal < randomtotalnm) {
+					$("#yaganaste").html("Keep playing, you still not there!");
 				}
-				
-		}
+
+			else if (ntotal === randomtotalnm) {
+					$("#yaganaste").html("GANASTE!!!!!!")
+					score++
+					$("#scoreganando").html("You score is:" + scoreganando);
+				}
+			};
 
 // 2. compare results when the equal or over values are on the addition
 // 3. System to save the score of the player.
@@ -71,3 +73,28 @@ var ntotal = 0;
 
 
 
+
+
+
+
+// 1. Pick the random amounts with the clicks on the images and add up the addition on the screen
+
+//verifing if i can do this... with the n variables... still not making my n to wokr on the HTML...
+		// $("#foto1").on("click", function(){
+		// 		ntotal += ranimg1;
+		// 		console.log(ntotal);
+		// 		$("#valordenumero").html("The number that you have so far is:" + ntotal);
+		// });
+		// $("#foto2").on("click", function(){
+		// 		ntotal += ranimg2;
+		// 		$("#valordenumero").html("The number that you have so far is:" + ntotal);
+		// });
+		// $("#foto3").on("click", function(){
+		// 		ntotal += ranimg3;
+		// 		console.log(ntotal);
+		// 		$("#valordenumero").html("The number that you have so far is:" + ntotal);
+		// });
+		// $("#foto4").on("click", function(){
+		// 		ntotal += ranimg4;
+		// 		$("#valordenumero").html("The number that you have so far is:" + ntotal);
+		// });
